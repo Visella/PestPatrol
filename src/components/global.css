@@ -1,0 +1,187 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the app takes up the full screen */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7e9;
+  color: #333;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f5f7e9;
+  border-bottom: 1px solid #d4d9c3;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-family: "Georgia", serif;
+  color: #4caf50;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4caf50;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #2e7d32;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 21px;
+  justify-content: space-between;
+}
+
+.burger div {
+  height: 3px;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+/* Show burger button on small devices */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f5f7e9;
+    padding: 20px;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    border-left: 1px solid #d4d9c3;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+/* Page Layout */
+.page {
+  padding-top: 100px; /* Ensure space below the fixed header */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 100px); /* Full height minus the header */
+}
+
+/* Center the content horizontally */
+.page-content {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto; /* Center content horizontally */
+  text-align: center; /* Ensure text is centered as well */
+}
+
+.page-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Specific Styling for Forms, Inputs, and Buttons */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .page-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

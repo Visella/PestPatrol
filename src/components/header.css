@@ -1,0 +1,40 @@
+/* Fixed Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f5f7e9; /* Light background */
+  border-bottom: 1px solid #d4d9c3; /* Adds a separator */
+  z-index: 1000; /* Keep it above other elements */
+  height: 80px; /* Height of the header */
+}
+
+.logo img{
+  max-width: 200px;
+}
+/* Global content padding for all pages to ensure content is below the header */
+.page {
+  padding-top: 100px; /* Padding to push content below the fixed header */
+}
+
+/* Menu styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4caf50;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #2e7d32;
+}

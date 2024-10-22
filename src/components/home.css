@@ -1,0 +1,60 @@
+/* Home Page Container */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  padding-top: 100px;
+  background-color: #f5f7e9; /* Light background */
+}
+
+.home-left {
+  width: 50%;
+}
+
+.home-left h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.highlight-text {
+  color: #ff4d4d; /* Red color for PESTS */
+}
+
+.home-left p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.home-right {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .home-container {
+    padding-top: 200px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-left,
+  .home-right {
+    width: 100%;
+  }
+
+  .home-image {
+    max-width: 80%;
+    margin-top: 20px;
+  }
+}

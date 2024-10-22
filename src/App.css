@@ -1,0 +1,69 @@
+/* General layout */
+.app-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f4f7e8; /* Light green background */
+}
+
+header .logo-text {
+  font-size: 3rem;
+  color: #467A3E; /* Green text */
+}
+
+.content h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.predict-button {
+  background-color: #4CAF50; /* Green button */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.predict-button:hover {
+  background-color: #45a049;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  header .logo-text {
+    font-size: 2rem;
+  }
+
+  .predict-button {
+    padding: 0.5rem 1rem;
+  }
+}

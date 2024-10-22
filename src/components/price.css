@@ -1,0 +1,110 @@
+/* Center the entire page */
+.page {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f5f7e9;
+}
+
+/* Title Styling */
+.page-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #777;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+/* Plans Container */
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Individual Plan Card */
+.plan {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Plan Titles */
+.plan h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Plan List */
+.plan ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.plan ul li {
+  margin: 10px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Plan Button Styles */
+.price-btn,
+.current-plan-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+
+.price-btn {
+  background-color: #4caf50;
+}
+
+.price-btn:hover {
+  background-color: #45a049;
+}
+
+.current-plan-btn {
+  background-color: #e0e0e0;
+  color: #666;
+  cursor: default;
+}
+
+/* Premium Plans */
+.premium {
+  border: 2px solid #4caf50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page{
+    padding-top: 1000px;
+
+  }
+  .plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan {
+    margin-bottom: 20px;
+  }
+}
