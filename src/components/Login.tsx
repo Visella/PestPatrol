@@ -3,7 +3,7 @@ import React from 'react';
 const Login: React.FC = () => {
   return (
     <div className="page">
-      <h1 className="page-title">Sign Up / Login</h1>
+      <h1 className="page-title">Sign Up</h1>
       <div className="page-content">
         <form>
           <input type="text" placeholder="Username" />

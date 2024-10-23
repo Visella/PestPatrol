@@ -14,7 +14,7 @@ const Header: React.FC = () => {
       <div className="logo">
         <h1>
           <Link to="/" onClick={() => setMenuActive(false)}>
-            <img src="src\assets\logo.png" alt="Pest Patrol" id="logo" />
+            <img src="../assets/logo.png" alt="Pest Patrol" id="logo" />
           </Link>
         </h1>
       </div>

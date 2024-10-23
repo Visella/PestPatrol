@@ -31,7 +31,7 @@ const About: React.FC = () => {
       </div>
       <div className="about-right">
         <img
-          src="/src/assets/pest_control.png"
+          src="../assets/pest_control.png"
           alt="About PestPatrol"
           className="about-image"
         />
