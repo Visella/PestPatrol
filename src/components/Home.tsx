@@ -29,7 +29,7 @@ const Home: React.FC = () => {
       </div>
       <div className="home-right">
         <img
-          src="src\assets\image.png"
+          src="/src/assets/image.png"
           alt="Pest detection illustration"
           className="home-image"
         />
