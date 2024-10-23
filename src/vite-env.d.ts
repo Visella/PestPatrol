@@ -8,4 +8,6 @@ export default {
       },
     },
   },
+  base: "/src/",
+  assetsDir: "assets",
 };

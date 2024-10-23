@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css"; // Link the About page CSS
-
+// import image from "../assets/pest_control.png";
 const About: React.FC = () => {
   return (
     <div className="about-container">
@@ -31,7 +31,7 @@ const About: React.FC = () => {
       </div>
       <div className="about-right">
         <img
-          src="src\assets\pest_control.png"
+          src="/src/assets/pest_control.png"
           alt="About PestPatrol"
           className="about-image"
         />
