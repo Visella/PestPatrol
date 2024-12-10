@@ -3,8 +3,18 @@ import './home.css'; // Link the home page CSS
 
 const Home: React.FC = () => {
   return (
+    
+    <div className='containt'>
+
     <div className="home-container">
-      <div className="home-left">
+    <div className="home-left">
+        <img
+          src="../assets/dashbord.jpeg"
+          alt="Pest detection illustration"
+          className="home-image"
+        />
+      </div>
+      <div className="home-right">
         <h1>BEWARE OF <span className="highlight-text">PESTS</span></h1>
         <p>
           Pests are herbivores that economically damage cultivated plants. Pest
@@ -27,12 +37,10 @@ const Home: React.FC = () => {
           appropriate solutions.
         </p>
       </div>
-      <div className="home-right">
-        <img
-          src="../assets/image.png"
-          alt="Pest detection illustration"
-          className="home-image"
-        />
+      
+    </div>
+    <div className="footer">
+        Diagnose. Treat. Grow.
       </div>
     </div>
   );

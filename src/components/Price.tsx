@@ -1,13 +1,17 @@
-import React from 'react';
-import './price.css';  // Link to the CSS file for styles
+import React from "react";
+import "./price.css"; // Link to the CSS file for styles
 
 const Price: React.FC = () => {
   return (
-    <div className="page">
-      <h1 className="page-title">A monthly pests reminder personalized for your plants</h1>
+    <div className="page" id="page">
+      
+      <h1 className="page-title-price">
+        A monthly pests reminder personalized for your plants
+      </h1>
       <p className="page-subtitle">
-        We offer flexible plans to suit every grower's needs. Our subscriptions provide access to tailored pest management
-        solutions and timely reminders, ensuring your plants remain healthy throughout the year.
+        We offer flexible plans to suit every grower's needs. Our subscriptions
+        provide access to tailored pest management solutions and timely
+        reminders, ensuring your plants remain healthy throughout the year.
       </p>
       <div className="plans">
         {/* Free Plan */}
@@ -44,6 +48,9 @@ const Price: React.FC = () => {
           </ul>
           <button className="price-btn">Rp2.400.000 / year</button>
         </div>
+      </div>
+      <div className="footer">
+        Diagnose. Treat. Grow.
       </div>
     </div>
   );

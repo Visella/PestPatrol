@@ -4,15 +4,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  padding-top: 100px;
+  padding-top: 200px;
   background-color: #f5f7e9; /* Light background */
 }
-
-.home-left {
+.containt {
+  background-color: #f5f7e9; /* Light background */
+  height: auto;
+}
+.home-right {
   width: 50%;
 }
 
-.home-left h1 {
+.home-right h1 {
   font-size: 36px;
   color: #333;
 }
@@ -21,15 +24,15 @@
   color: #ff4d4d; /* Red color for PESTS */
 }
 
-.home-left p {
+.home-right p {
   font-size: 18px;
   color: #555;
   margin-top: 15px;
   line-height: 1.6;
 }
 
-.home-right {
-  width: 45%;
+.home-left {
+  width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,23 +41,43 @@
 .home-image {
   max-width: 100%;
   height: auto;
+  border-radius: 50%;
 }
-
+.footer {
+  text-align: right;
+  font-size: 24px;
+  color: #9f9797;
+  font-weight: 700;
+  margin-top: 20px;
+  background-color: #f5f7e9; /* Light background */
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .containt {
+    padding-top: 500px;
+  }
   .home-container {
-    padding-top: 200px;
+    padding-top: 500px;
     flex-direction: column;
     text-align: center;
   }
 
   .home-left,
   .home-right {
+    padding-bottom: 100px;
     width: 100%;
   }
 
   .home-image {
     max-width: 80%;
     margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .containt {
+    padding-top: 500px;
+  }
+  .home-container {
+    padding-top: 500px;
   }
 }

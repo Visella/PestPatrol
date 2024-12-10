@@ -1,18 +1,27 @@
 /* Center the entire page */
 .page {
-  padding-top: 120px;
+  padding-top: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background-color: #f5f7e9;
 }
+.photo {
+  width: 80%;
+  margin-top: 300px;
+}
 
 /* Title Styling */
-.page-title {
+.page-title-price {
   font-size: 32px;
-  color: #333;
-  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  padding: 100px 200px;
+  background-image: url("../assets/price.jpg");
+  background-size: cover;
+  background-position: center;
+  max-width: 90%;
 }
 
 .page-subtitle {
@@ -92,12 +101,21 @@
 .premium {
   border: 2px solid #4caf50;
 }
+.footer {
+  text-align: right; /* Mengarahkan teks ke kanan */
+  font-size: 24px; /* Ukuran font */
+  color: #9f9797; /* Warna teks */
+  font-weight: 700;
+  padding: 20px; /* Tambahkan padding untuk jarak */
+  background-color: #f5f7e9; /* Warna latar belakang */
+  width: 100%; /* Pastikan lebar penuh */
+  box-sizing: border-box; /* Memastikan padding dihitung dalam lebar */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .page{
-    padding-top: 1000px;
-
+  #page {
+    padding-top: 1500px;
   }
   .plans {
     flex-direction: column;

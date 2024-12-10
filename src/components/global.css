@@ -14,7 +14,10 @@ body {
   background-color: #f5f7e9;
   color: #333;
 }
-
+.logo {
+  position: relative;
+  z-index: 1001; /* Pastikan lebih tinggi dari elemen lain */
+}
 #root {
   width: 100vw;
   min-height: 100vh;
@@ -30,10 +33,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 5px 50px;
   background-color: #f5f7e9;
-  border-bottom: 1px solid #d4d9c3;
+  border-bottom: 1px solid black;
   z-index: 1000;
+  margin-right: 50px ;
 }
 
 .logo h1 {
@@ -45,14 +49,14 @@ body {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 nav ul li a {
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
-  color: #4caf50;
-  font-size: 16px;
-  font-weight: bold;
+  color: black;
+  font-size: 20px;
 }
 
 nav ul li a:hover {
@@ -74,7 +78,26 @@ nav ul li a:hover {
   background-color: #4caf50;
   border-radius: 5px;
 }
+nav ul li a.active-link {
+  color: green; /* Warna hijau */
+  font-weight: bold; /* Teks lebih tebal */
+  text-decoration: underline; /* Garis bawah */
+  padding-bottom: 2px; /* Spasi agar garis tidak terlalu dekat dengan teks */
+}
 
+.profile-icon {
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #4caf50; 
+  object-fit: cover; 
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Show burger button on small devices */
 @media (max-width: 768px) {
   nav ul {
@@ -101,15 +124,7 @@ nav ul li a:hover {
 }
 
 /* Page Layout */
-.page {
-  padding-top: 100px; /* Ensure space below the fixed header */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: calc(100vh - 100px); /* Full height minus the header */
-}
+
 
 /* Center the content horizontally */
 .page-content {
@@ -119,39 +134,367 @@ nav ul li a:hover {
   margin: 0 auto; /* Center content horizontally */
   text-align: center; /* Ensure text is centered as well */
 }
+.content-box {
+  margin:  30px 0;
+  border: 1px solid #ccc;
+  background-color: #eaffd0;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 50px 100px ;
+  position: relative;
+  margin-top: 10px;
+}
 
 .page-title {
   font-size: 36px;
   color: #333;
+  margin:  20px 0;
+}
+.file-input {
+  display: block;
+  margin: 0 auto 10px;
+  padding: 8px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  
+}
+
+.predict-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 150px;
+  margin: 10px auto;
+}
+.images-box {
+  position: relative; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 20px; 
+  height: 150px; 
+}
+
+.images-box img {
+  position: relative;
+  width: 80px; 
+}
+
+.images-box img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 40px; /* Posisi kiri */
+  width: 90px;
+}
+
+.images-box img:nth-child(2) {
+  position: relative;
+  z-index: 1; /* Pastikan di atas gambar lain */
+  width: 100px; /* Ukuran lebih besar untuk gambar tengah */
+  bottom: -50px;
+}
+
+.images-box img:nth-child(3) {
+  position: absolute;
+  top: 0;
+  right:40px; /* Posisi kanan */
+  width: 150px;
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+
+.back-btn-error:hover {
+  background-color: #bbb;
+}
+
+
+.result-page {
+  text-align: center;
+  margin-top: 400px;
+  background-color: #f5f7e9;
+}
+
+.result-border {
+  margin:  30px 0;
+  border: 1px solid #ccc;
+  background-color: #eaffd0;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 50px 100px ;
+  position: relative;
+  margin-top: 30px;
+
+}
+
+.result-title {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.result-image {
+  max-width: 1000px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.result-description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.back-btn {
+  background-color: red;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50px;
+  margin-left: 300px;
+  padding: 5px 10px;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
-/* Specific Styling for Forms, Inputs, and Buttons */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-button {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  color: #333;
+.page .footer {
+  text-align: right; 
+  font-size: 24px; 
+  color: #9f9797; 
+  font-weight: 700;
+  padding: 20px; 
+  background-color: #f5f7e9; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+.leaf {
+  position: absolute;
+  width: 160px;
+  height: auto;
 }
 
-button {
-  background-color: #4caf50;
-  color: white;
+.leaf.top-left {
+  top: -20px;
+  left: -20px;
+}
+
+.leaf.bottom-right {
+  bottom: -20px;
+  right: -20px;
+}
+.simple-btn {
+  background: none; 
+  color: #4caf50; 
+  border: none; 
+  font-size: 16px; 
+  cursor: pointer; 
+  text-decoration: underline; 
+  margin-top: 20px;
+}
+
+.simple-btn:hover {
+  color: #2e7d32; 
+  text-decoration: none; /
+}
+/* Layout untuk Halaman Detail */
+.details-page {
+  padding: 20px;
+  padding-top: 150px; /* Beri jarak dari navbar */
+  background-color: #f5f7e9;
+}
+
+.details-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+  gap: 20px;
+  background-color: #f5f7e9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+}
+
+.details-image-container {
+  flex: 0 0 35%; /* Tetapkan lebar tetap untuk gambar */
+  display: flex; /* Aktifkan flex di dalam kontainer gambar */
+  order: 1;
+  height: auto;
+}
+
+.details-image {
+  max-width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  align-items: stretch; /* Gambar meregang mengikuti panjang teks */
+  
+}
+
+.details-text-container {
+  flex: 1; 
+  background-color: #f9f9f9;
+  padding:  20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Teks rata tengah secara default */
+  order: 0;
+  max-width: 900px;
+  width: 200px;
+  height:auto;
+  overflow-y: auto; 
+}
+
+.details-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #C84242;
+  text-align: center;
+}
+
+.details-text-container h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #333;
+
+}
+
+.details-text-container ul {
+  list-style: disc;
+  margin-left: 20px;
+  text-align: left;
+}
+
+
+.detail-back-btn{
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: green;
+  padding: 5px 10px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  width: 50px;
+  display: inline-block;
+  flex: 1;
+  margin-top: 50px;
+}
+.back-btn:hover {
+  background-color: #bbb;
+}
+.page-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7e9;
+  padding-top: 300px;
+}
+
+.page-title-login {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.page-content-login {
+  background-color: #fff; /* Latar belakang putih */
+  border-radius: 8px; /* Membuat sudut kotak melengkung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 500px; /* Lebar maksimum formulir */
+  text-align: left;
+  border: 1px solid #e0e0e0; /* Border tipis */
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+ 
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #F3F2F2;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #4caf50;
+}
+
+label {
+  font-size: 14px;
+}
+
+/* Checkbox and Terms */
+input[type="checkbox"] {
+  margin-right: 8px;
+  background-color: white;
+}
+
+
+/* Button Styling */
+.submit-form {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 350px;
 }
 
 button:hover {
   background-color: #45a049;
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -163,17 +506,84 @@ button:hover {
     font-size: 20px;
   }
 
+  .content-box {
+    padding: 15px;
+    max-width: 90%;
+    padding-bottom: 80px;
+    
+  }
+  .result-border{
+    padding: 15px;
+    max-width: 90%;
+    padding-bottom: 80px;
+   }
   .page-title {
     font-size: 28px;
+  }
+
+  .file-input, .predict-btn {
+    width: 100px;
+    margin-bottom: 10px;
   }
 
   .page-content {
     padding: 10px;
   }
+
+  .page {
+    padding-top: 50px; /* Adjust for smaller screens */
+  }
+ 
+  .images-box img {
+    width: 40px;
+    gap: 20px;
+  }
+
+  .details-layout {
+    flex-direction: column; /* Ubah menjadi vertikal */
+    gap: 20px; /* Tambahkan jarak antar elemen */
+  }
+
+  .details-image-container {
+    margin: auto;
+    order: -1; /* Gambar muncul di atas teks */
+    text-align: center; /* Pusatkan gambar */
+    margin-top: 10px;
+  }
+
+  .details-text-container {
+    order: 0; /* Teks tetap di bawah */
+    text-align: center; /* Teks diratakan di tengah */
+    max-width: 100%;
+    width: 100%;
+  }
+  .detail-back-btn {
+    order: -1;
+    z-index: 1000;
+    margin-top: 600px;
+  }
+  .page-content-login {
+    padding: 30px 20px;
+    width: 90%; /* Mengurangi lebar untuk layar kecil */
+  }
+
+  .page-title-login {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .submit-form {
+    font-size: 14px;
+    margin-left: 175px;
+    margin-top: 30px;
+    background-color: blue;
+  }
+
 }
 
+
 @media (max-width: 480px) {
-  h1 {
+  h2 {
     font-size: 24px;
   }
 
@@ -183,5 +593,39 @@ button:hover {
   button {
     font-size: 14px;
     padding: 10px;
+  }
+
+  .page {
+    padding-top: 40px; 
+  }
+  .page-title {
+    font-size: 24px;
+  }
+
+  .file-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .result-border{
+    padding: 30px;
+    max-width: 80%;
+    padding-bottom: 80px;
+   }
+   .back-btn {
+    background-color: red;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50px;
+    margin-left: 250px;
+  }
+  .predict-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  images-box img {
+    width: 30px;
+    gap: 20px;
   }
 }
