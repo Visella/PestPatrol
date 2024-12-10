@@ -44,8 +44,8 @@ const Detect: React.FC = () => {
         class: response.data.predicted_class,
         description: response.data.description,
         imageUrl: URL.createObjectURL(file), // Use the uploaded file's URL
-        symptoms: ["Leaf discoloration", "Rust spots on leaves"],
-        management: ["Prune infected branches", "Apply fungicide"],
+        symptoms: response.data.symptoms,
+        management: response.data.management,
       });
       setView("result");
     } catch (error) {
