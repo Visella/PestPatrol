@@ -33,7 +33,7 @@ const Detect: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://api-pest-patrol.vercel.app/predict",
+        "https://api-pest-patrol.vercel.app:5000/predict",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
