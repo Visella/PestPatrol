@@ -4,15 +4,13 @@ import "./header.css";
 
 const Header: React.FC = () => {
   const [menuActive, setMenuActive] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Status login pengguna
   const location = useLocation();
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
-  console.log("Current Path:", location.pathname);
+
   const getLinkClass = (path: string) => {
-    console.log(`Path: ${path}, Active: ${location.pathname === path}`);
     return location.pathname === path ? "active-link" : "";
   };
 
@@ -64,27 +62,13 @@ const Header: React.FC = () => {
             </Link>
           </li>
           <li>
-            {isLoggedIn ? (
-              <Link
-                to="/profile"
-                className="profile-link"
-                onClick={() => setMenuActive(false)}
-              >
-                <img
-                  src="../assets/profile.png"
-                  alt="Profile"
-                  className="profile-icon"
-                />
-              </Link>
-            ) : (
-              <Link
-                to="/login"
-                className={getLinkClass("/login")}
-                onClick={() => setMenuActive(false)}
-              >
-                Login
-              </Link>
-            )}
+            <Link
+              to="/login"
+              className={getLinkClass("/login")}
+              onClick={() => setMenuActive(false)}
+            >
+              Login
+            </Link>
           </li>
         </ul>
       </nav>
