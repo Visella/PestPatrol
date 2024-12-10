@@ -4,7 +4,6 @@ import "./global.css";
 
 const Detect: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
-  const [prediction, setPrediction] = useState<string>("");
   const [view, setView] = useState<"upload" | "error" | "result" | "details">(
     "upload"
   );
@@ -72,7 +71,6 @@ const Detect: React.FC = () => {
                 Predict
               </button>
             </form>
-            {prediction && <h2>Prediction: {prediction}</h2>}
             <div className="images-box">
               <img src="../assets/takut.png" alt="" />
               <img src="../assets/dilarang.png" alt="" />
