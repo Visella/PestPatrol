@@ -33,7 +33,7 @@ const Detect: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://9653-103-84-6-70.ngrok-free.app/predict",
+        " https://10e3-103-84-6-68.ngrok-free.app/predict",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
